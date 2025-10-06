@@ -113,7 +113,7 @@ Time and Space Analysis for problem 3:
                     this gives us a space complexity of O(n)
 - Why this approach? The individual calculations are core python routines that are optimized.  The loops are easy to follow and perform well
 - Could it be optimized? Assuming that the list contains no duplicates, if the input is sorted, then you could stop the main loop early 
-                         as soon as the number exceeds the target.  You could also 
+                         as soon as the number exceeds the target.  The return list(set(pairs)) works to get unique values but seems a good candidate for optimization.
 """
 
 
