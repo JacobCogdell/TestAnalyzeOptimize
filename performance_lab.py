@@ -113,7 +113,7 @@ Time and Space Analysis for problem 3:
                     this gives us a space complexity of O(n)
 - Why this approach? The individual calculations are core python routines that are optimized.  The loops are easy to follow and perform well
 - Could it be optimized? Assuming that the list contains no duplicates, if the input is sorted, then you could stop the main loop early 
-                         as soon as the number exceeds the target.  
+                         as soon as the number exceeds the target.  You could also 
 """
 
 
@@ -174,11 +174,11 @@ Time and Space Analysis for problem 4:
 
 def running_total(nums):
     sum_list = []
-    sum = 0
+    running_sum = 0
 
     for num in nums:
-        sum += num
-        sum_list.append(sum)
+        running_sum += num
+        sum_list.append(running_sum)
 
     return sum_list
 
@@ -196,7 +196,7 @@ Time and Space Analysis for problem 5:
 - Worst-case: The worst case and average case are the same for this one.  The loop must execute n times and all of the calculations within 
               the loop are O(1).  This makes the worst case O(n)
 - Average-case: For the same reasoning as in the worst case, the average case is also O(n)
-- Space complexity: The space of the sum_list will always be n-1 and is therefore considered O(n)
-- Why this approach? Every input must be handled and the loop is as efficient as possible.  All computations are core O(1) python calls.clear
+- Space complexity: The space of the sum_list will always be n and is therefore considered O(n)
+- Why this approach? Every input must be handled and the loop is as efficient as possible.  All computations are core O(1) python calls.
 - Could it be optimized? I do not believe so.  I believe this code is optimum.
 """
